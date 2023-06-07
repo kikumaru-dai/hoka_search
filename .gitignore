@@ -36,19 +36,7 @@ yarn-debug.log*
 .yarn-integrity
 /public/uploads
 /app/javascript/images
-/app/aseets/images/
-/app/assets/stylesheets/
-/app/javascript/packs/styles/
-package-lock.json
-
-# Ignore specific files and directories
-app/assets/images/logo-img.png
-app/assets/images/logo-title.png
-app/assets/images/new_post.svg
-app/assets/stylesheets/Animated-Menu-Icon.css
-app/assets/stylesheets/Minimal-tabs-styles.css
-app/assets/stylesheets/Minimal-tabs.css
-app/assets/stylesheets/Navbar-With-Button-icons.css
-app/assets/stylesheets/Testimonials-images.css
-app/assets/stylesheets/post_comments.scss
+app/aseets/images/
+app/assets/stylesheets/
 app/javascript/packs/styles/
+package-lock.json
