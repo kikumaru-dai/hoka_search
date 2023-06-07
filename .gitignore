@@ -36,3 +36,7 @@ yarn-debug.log*
 .yarn-integrity
 /public/uploads
 /app/javascript/images
+/app/aseets/images
+/app/assets/stylesheets
+/app/javascript/packs/styles/
+package-lock.json
