@@ -1,0 +1,43 @@
+// =============================================================================
+// 基本的なスタイルを定義します。
+// ページの下地としての全体の背景や、基本的なタイポグラフィなど
+// =============================================================================
+
+@import './variable';
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body {
+  font-family: -apple-system, "Roboto", "Noto Sans", "Noto Sans JP", "Hiragino Kaku Gothic ProN", メイリオ, meiryo, Arial, Helvetica, sans-serif;
+  color: $dark-grey;
+  background-color: $bgcolor--grey;
+}
+
+// hoverした時にふわっとさせる
+%transition {
+  transition: all  0.3s ease;
+}
+a {
+  @extend %transition;
+  display: block;
+  text-decoration: none;
+  color: $blue;
+    &:visited {
+      color: $blue;
+    }
+    &:hover {
+      color: $hover-light-blue;
+      @extend %transition;
+    }
+}
+button, input[type="submit"] {
+  @extend %transition;
+  &:hover {
+    @extend %transition;
+    cursor: pointer;
+  }
+}

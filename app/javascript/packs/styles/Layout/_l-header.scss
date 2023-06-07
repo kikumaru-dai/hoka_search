@@ -1,0 +1,21 @@
+@import '../Foundation/mixin';
+
+.l-header {
+  @include flex(between, center);
+  // background-color: #E7D0A9;
+}
+
+.l-header__horizontal {
+    display: flex;
+}
+
+.l-header__img {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.l-header__title {
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
