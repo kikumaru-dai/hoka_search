@@ -35,5 +35,3 @@
 yarn-debug.log*
 .yarn-integrity
 /public/uploads
-/app/javascript/images
-package-lock.json
