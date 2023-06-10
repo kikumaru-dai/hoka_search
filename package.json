@@ -12,6 +12,10 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "@babel/plugin-proposal-private-methods": "^7.18.6",
     "webpack-dev-server": "^3"
-  }
+  },
+  "main": "index.js",
+  "repository": "git@github.com:kikumaru-dai/hoka_search.git",
+  "license": "MIT"
 }
