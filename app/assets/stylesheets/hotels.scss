@@ -1,17 +1,6 @@
-// Place all the styles related to the hotels controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
-
 // index.html.erb
 @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
-
-:root {
-  --primary: #0d6efd;
-  --dark: #21252f;
-  --body: #888;
-  --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
-}
 
 body {
   font-family: 'Kaisei Decol', serif;
@@ -29,23 +18,11 @@ a {
   text-decoration: none;
 }
 
-// section {
-//   padding-top: 120px;
-//   padding-bottom: 120px;
-// }
-
 .nav-link {
   color: #fff !important;
   font-size: 14px;
   font-weight: 700;
-  // padding-top: 16px;
 }
-
-// .btn {
-//   // padding: 14px 18px;
-//   border-width: 2px;
-//   border-radius: 0;
-// }
 
 .hero {
   background-image: image-url('main_visual.jpg');
@@ -68,12 +45,9 @@ a {
   z-index: -1;
 }
 
-// id="search"セクションここから
-
 #search {
   background-color: #f7ede0;
 }
-//id="search"セクションここまで
 
 //id="カテゴリセクションここから"
 .bd-placeholder-img {
@@ -126,19 +100,77 @@ a {
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
-//id="カテゴリセクションここまで"
-
 //カテゴリーカード
-.card-img {
-  background-image: image-url('main_visual.jpg');
+.card-img-overlay{
+  padding: 0;
+  top: calc(50% - 0.5rem);
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
+    color: #fff;
+    font-family: a-otf-midashi-go-mb31-pr6n,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: .1em;
+    font-feature-settings: "palt" on;
+    font-display: swap;
+    text-shadow: 0 1px 0 rgba(0,0,0,.75), 0 0 10px rgba(0,0,0,.35);
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: .08em;
 }
 
-//services
+.card-img-overlay p {
+  font-size: 20px;
+  font-weight:bold;
+}
+
 #services {
   padding-top: 120px;
 }
 
+//ホテル一覧のカードここから
+.register_hotel .card{
+  padding-top:10px;
+  padding-right:10px;
+  padding-left:10px;
+}
 
-//ここから
+.card__imgframe{
+  width: 100%;
+  height: auto;
+  padding-top: 56.25%;
+  background: url('main_visual.jpg') no-repeat center;
+  background-size: cover;
+  box-sizing: border-box;
+}
 
-//ここまで
+.card__textbox{
+  width: 100%;
+  height: auto;
+  padding: 20px 18px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.card__textbox > * + *{
+  margin-top: 10px;
+}
+
+.card__titletext{
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 125%;
+}
+
+.card__overviewtext{
+  font-size: 12px;
+  line-height: 150%;
+}
+
+.card-skin{
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,.2);
+}
+//ホテル一覧のカードここまで
