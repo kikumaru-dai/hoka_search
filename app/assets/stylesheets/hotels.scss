@@ -1,0 +1,176 @@
+// index.html.erb
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+
+body {
+  font-family: 'Kaisei Decol', serif;
+  line-height: 1.7;
+  color: var(--body);
+}
+
+h1, h2, h3, h4, h5, h6, .display-4 {
+  color: var(--dark);
+  font-weight: 700;
+}
+
+a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.nav-link {
+  color: #fff !important;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.hero {
+  background-image: image-url('main_visual.jpg');
+  height:600px;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 2;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(37, 39, 71, 0.7);
+  z-index: -1;
+}
+
+#search {
+  background-color: #f7ede0;
+}
+
+//id="カテゴリセクションここから"
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+//カテゴリーカード
+.card-img-overlay{
+  padding: 0;
+  top: calc(50% - 0.5rem);
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
+  color: #fff;
+  font-family: a-otf-midashi-go-mb31-pr6n,sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: .1em;
+  font-feature-settings: "palt" on;
+  font-display: swap;
+  text-shadow: 0 1px 0 rgba(0,0,0,.75), 0 0 10px rgba(0,0,0,.35);
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: .08em;
+  
+  p {
+    font-size: 20px;
+    font-weight:bold;
+  }
+}
+
+#services {
+  padding-top: 120px;
+}
+
+//ホテル一覧のカードここから
+.register_hotel .card{
+  padding-top:10px;
+  padding-right:10px;
+  padding-left:10px;
+}
+
+.card__imgframe{
+  width: 100%;
+  height: auto;
+  padding-top: 56.25%;
+  background: url('main_visual.jpg') no-repeat center;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.card__textbox{
+  width: 100%;
+  height: auto;
+  padding: 20px 18px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+& > * + *{
+  margin-top: 10px;
+}
+
+.card__titletext{
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 125%;
+}
+
+.card__overviewtext{
+  font-size: 12px;
+  line-height: 150%;
+}
+
+.card-skin{
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,.2);
+}
+//ホテル一覧のカードここまで

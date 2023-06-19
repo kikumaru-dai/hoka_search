@@ -1,0 +1,283 @@
+<section class="hero d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 mx-auto text-center">
+          <h1 class="display-4 text-white my-3">「ホカンス」を楽しもう！</h1>
+          <p class="text-white">「ホカンス」とはホテルでバケーション、休暇を楽しむという造語です。<br>都内にはホカンスが楽しめるホテルがたくさんあります！
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section id="search" class="py-4 text-center container-fluid" >
+    <div class="row py-lg-1">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h4 class="fw-light mx-auto">「ホカンス」したい都内のホテルを最寄駅とカテゴリから探してみましょう</h1>
+      
+          <form class="needs-validation text-center" novalidate>
+          <div class="row g-3 d-flex justify-content-center">
+      
+            <div class="col-md-10 d-flex row">
+              <div class="col-md-6 ">
+                <select class="form-select my-3" id="country" style="height:48px;">
+                  <option value="">都内のエリアを選択</option>
+                  <option>浅草</option>
+                </select>
+              </div>
+            
+              <p class="col-md-1 my-4">✖️</p>
+  
+              <div class="col-md-5 ">
+                <select class="form-select my-3" id="state" style="height:48px;">
+                  <option value="">カテゴリを選択</option>
+                  <option>サウナがある</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="col-md-2">
+              <button class=" btn text-white btn-lg" style="background-color:#2146c7;" type="submit">検索</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+<section id="category">
+  <div class="container">
+    <div class="d-flex justify-content-between my-5">
+      <p class="text-left text-black fs-3">人気のカテゴリ</p>
+      <p class="text-right my-2" style="color:#2146c7;text-decoration:underline;">すべてのカテゴリを見る</p>
+    </div>
+      
+      <div class="row g-4">
+        
+         <div class="col-md-3 example">
+            <div class="card">
+              <%= image_tag 'main_visual.jpg', class: 'card-image' %>
+              <div class="card-img-overlay">
+                <p class="my-5" style="line-height:1;">#南国リゾート気分でのんびりできる</p>
+              </div>
+            </div>
+          </div>
+        
+         <div class="col-md-3  example">
+            <div class="card">
+              <%= image_tag 'main_visual.jpg', class: 'card-image' %>
+              <div class="card-img-overlay">
+                <p class="my-5" style="line-height:1;">#部屋から絶景オーシャンビューが見渡せる</p>
+              </div>
+            </div>
+          </div>
+          
+         <div class="col-md-3  example">
+            <div class="card">
+              <%= image_tag 'main_visual.jpg', class: 'card-image' %>
+              <div class="card-img-overlay">
+                <p class="my-5" style="line-height:1;">#客室に露天風呂がある</p>
+              </div>
+            </div>
+          </div>
+          
+         <div class="col-md-3  example">
+            <div class="card">
+              <%= image_tag 'main_visual.jpg', class: 'card-image' %>
+              <div class="card-img-overlay">
+                <p class="my-5" style="line-height:1;">#テラスでくつろげる</p>
+              </div>
+            </div>
+          </div>      
+          
+         <div class="col-md-3  example">
+            <div class="card">
+              <%= image_tag 'main_visual.jpg', class: 'card-image' %>
+              <div class="card-img-overlay">
+                <p class="my-5" style="line-height:1;">#記念日にぴったり</p>
+              </div>
+            </div>
+          </div>
+        
+         <div class="col-md-3  example">
+            <div class="card">
+              <%= image_tag 'main_visual.jpg', class: 'card-image' %>
+            <div class="card-img-overlay">
+              <p class="my-5" style="line-height:1;">#オールインクールシブ</p>
+            </div>
+          </div>
+          </div>
+          
+         <div class="col-md-3  example">
+              <div class="card">
+                <%= image_tag 'main_visual.jpg', class: 'card-image' %>
+              <div class="card-img-overlay">
+                <p class="my-5" style="line-height:1;">#オールインクールシブ</p>
+              </div>
+            </div>
+          </div>
+          
+         <div class="col-md-3  example">
+            <div class="card">
+              <%= image_tag 'main_visual.jpg', class: 'card-image' %>
+            <div class="card-img-overlay">
+              <p class="my-5" style="line-height:1;">#オールインクールシブ</p>
+            </div>
+          </div>
+          </div>
+          
+      </div>
+      
+      <hr class="my-4">
+        <p class="text-center" style="color:#2146c7;">すべてのカテゴリをみる</p>
+      <hr class="my-4">
+  </div>
+</section>
+  
+<section id="team" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="d-flex justify-content-between my-5">
+          <p class="text-left text-black fs-3">登録ホテル一覧</p>
+          <p class="text-right my-2" style="color:#2146c7;text-decoration:underline;">すべてのホテルを見る</p>
+        </div>
+      </div>
+
+      <div class="row">
+        
+        <div class="col-md-6 my-2">
+        <div class="register_hotel card card-skin">
+          <div class="card__imgframe"></div>
+          <div class="card__textbox">
+            <div class="card__titletext">
+              そらの気分を味わう宿
+            </div>
+            <p class="text-secondary">台東区浅草</p>
+            <div class="card__overviewtext">
+              世界自然遺産に登録された奄美大島の青い海が広がり、ホテル前のヤドリ浜には幸せを運ぶと言われるウミガメが生息。白い砂浜とサンゴ礁の美しい海岸が味わえます
+            </div>
+            <p class="text-secondary small" style="font-size: 6px;">#オールインクルーシブ#客室に露天風呂がある</p>
+          </div>
+        </div>
+        </div>
+        
+        <div class="col-md-6 my-2">
+        <div class="register_hotel card card-skin">
+          <div class="card__imgframe"></div>
+          <div class="card__textbox">
+            <div class="card__titletext">
+              そらの気分を味わう宿
+            </div>
+            <p class="text-secondary">台東区浅草</p>
+            <div class="card__overviewtext">
+              世界自然遺産に登録された奄美大島の青い海が広がり、ホテル前のヤドリ浜には幸せを運ぶと言われるウミガメが生息。白い砂浜とサンゴ礁の美しい海岸が味わえます
+            </div>
+            <p class="text-secondary small" style="font-size: 6px;">#オールインクルーシブ#客室に露天風呂がある</p>
+          </div>
+        </div>
+        </div>
+        
+        <div class="col-md-6 my-2">
+        <div class="register_hotel card card-skin">
+          <div class="card__imgframe"></div>
+          <div class="card__textbox">
+            <div class="card__titletext">
+              そらの気分を味わう宿
+            </div>
+            <p class="text-secondary">台東区浅草</p>
+            <div class="card__overviewtext">
+              世界自然遺産に登録された奄美大島の青い海が広がり、ホテル前のヤドリ浜には幸せを運ぶと言われるウミガメが生息。白い砂浜とサンゴ礁の美しい海岸が味わえます
+            </div>
+            <p class="text-secondary small" style="font-size: 6px;">#オールインクルーシブ#客室に露天風呂がある</p>
+          </div>
+        </div>
+        </div>
+        
+        <div class="col-md-6 my-2">
+        <div class="register_hotel card card-skin">
+          <div class="card__imgframe"></div>
+          <div class="card__textbox">
+            <div class="card__titletext">
+              そらの気分を味わう宿
+            </div>
+            <p class="text-secondary">台東区浅草</p>
+            <div class="card__overviewtext">
+              世界自然遺産に登録された奄美大島の青い海が広がり、ホテル前のヤドリ浜には幸せを運ぶと言われるウミガメが生息。白い砂浜とサンゴ礁の美しい海岸が味わえます
+            </div>
+            <p class="text-secondary small" style="font-size: 6px;">#オールインクルーシブ#客室に露天風呂がある</p>
+          </div>
+        </div>
+        </div>
+        
+        <div class="col-md-6 my-2">
+        <div class="register_hotel card card-skin">
+          <div class="card__imgframe"></div>
+          <div class="card__textbox">
+            <div class="card__titletext">
+              そらの気分を味わう宿
+            </div>
+            <p class="text-secondary">台東区浅草</p>
+            <div class="card__overviewtext">
+              世界自然遺産に登録された奄美大島の青い海が広がり、ホテル前のヤドリ浜には幸せを運ぶと言われるウミガメが生息。白い砂浜とサンゴ礁の美しい海岸が味わえます
+            </div>
+            <p class="text-secondary small" style="font-size: 6px;">#オールインクルーシブ#客室に露天風呂がある</p>
+          </div>
+        </div>
+        </div>
+        
+        <div class="col-md-6 my-2">
+        <div class="register_hotel card card-skin">
+          <div class="card__imgframe"></div>
+          <div class="card__textbox">
+            <div class="card__titletext">
+              そらの気分を味わう宿
+            </div>
+            <p class="text-secondary">台東区浅草</p>
+            <div class="card__overviewtext">
+              世界自然遺産に登録された奄美大島の青い海が広がり、ホテル前のヤドリ浜には幸せを運ぶと言われるウミガメが生息。白い砂浜とサンゴ礁の美しい海岸が味わえます
+            </div>
+            <p class="text-secondary small" style="font-size: 6px;">#オールインクルーシブ#客室に露天風呂がある</p>
+          </div>
+        </div>
+        </div>
+        
+        <div class="col-md-6 my-2">
+        <div class="register_hotel card card-skin">
+          <div class="card__imgframe"></div>
+          <div class="card__textbox">
+            <div class="card__titletext">
+              そらの気分を味わう宿
+            </div>
+            <p class="text-secondary">台東区浅草</p>
+            <div class="card__overviewtext">
+              世界自然遺産に登録された奄美大島の青い海が広がり、ホテル前のヤドリ浜には幸せを運ぶと言われるウミガメが生息。白い砂浜とサンゴ礁の美しい海岸が味わえます
+            </div>
+            <p class="text-secondary small" style="font-size: 6px;">#オールインクルーシブ#客室に露天風呂がある</p>
+          </div>
+        </div>
+        </div>
+        
+        <div class="col-md-6 my-2">
+        <div class="register_hotel card card-skin">
+          <div class="card__imgframe"></div>
+          <div class="card__textbox">
+            <div class="card__titletext">
+              そらの気分を味わう宿
+            </div>
+            <p class="text-secondary">台東区浅草</p>
+            <div class="card__overviewtext">
+              世界自然遺産に登録された奄美大島の青い海が広がり、ホテル前のヤドリ浜には幸せを運ぶと言われるウミガメが生息。白い砂浜とサンゴ礁の美しい海岸が味わえます
+            </div>
+            <p class="text-secondary small" style="font-size: 6px;">#オールインクルーシブ#客室に露天風呂がある</p>
+          </div>
+        </div>
+        </div>
+        
+      </div>
+    
+    
+    <hr class="my-4">
+      <p class="text-center" style="color:#2146c7;">すべてのホテルをみる</p>
+    <hr class="my-4">
+    </div>
+  </section>
