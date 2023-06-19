@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-10 col-md-6">
+      <%= form_with model: hotel, local: true, class: 'text-center mb-5' do |f| %>
+        <%= render 'layouts/validation_error', instance: hotel %>
+
+        <div class="div-title">
+          <div class="text-start">
+            <%= f.label :name, class: 'title-p fw-bold text-main', value: 'ホテルの名前' %>
+          </div>
+          <%= f.text_field :name, class: 'form-control py-md-3 rounded bg-white box-shadow mb-3' %>
+        </div>
+        
+        <div class="div-title">
+          <div class="text-start">
+            <%= f.label :title, class: 'title-p fw-bold text-main', value: 'ホテルのタイトル' %>
+          </div>
+          <%= f.text_field :title, class: 'form-control py-md-3 rounded bg-white box-shadow mb-3' %>
+        </div>
+        
+        <div class="div-title">
+          <div class="text-start">
+            <%= f.label :describe, class: 'title-p fw-bold text-main', value: 'ホテルについて' %>
+          </div>
+          <%= f.text_area :describe, class: 'form-control py-md-3 rounded bg-white box-shadow mb-3' %>
+        </div>
+        
+        <div class="img-select">
+          <div class="text-start">
+            <%= f.label :image, class: 'fw-bold mb-3 text-main', value: 'サムネイル画像' %>
+          </div>
+          <%= f.file_field :image %>
+        </div>
+        
+        <div class="py-3">
+          <div class="text-start mb-3">
+            <%= f.label :address, class: 'fw-bold rounded text-main', value: 'ホテルの所在地（例：東京都浅草）' %>
+          </div>
+          <%= f.text_field :address, class: 'form-control tag-text box-shadow bg-white' %>
+        </div>
+        
+        <div class="col-12 d-flex justify-content-center">
+          <%= f.submit '登録する', class: 'btn d-block rounded fw-bold box-shadow text-white mt-4 px-5 py-3 fs-6 bg-purple' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
