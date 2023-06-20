@@ -1,5 +1,6 @@
 class HotelsController < ApplicationController
   before_action :deny_non_admin_users, only: [:new, :edit]
+
     
   def index
      @hotels = Hotel.all
