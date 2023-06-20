@@ -1,5 +1,6 @@
 class HotelsController < ApplicationController
-    before_action :deny_non_admin_users, only: [:new, :edit]
+  before_action :deny_non_admin_users, only: [:new, :edit]
+
     
   def index
      @hotels = Hotel.all
@@ -23,20 +24,20 @@ class HotelsController < ApplicationController
   end
   
   def update
-     @hotel = Hotel.find(params[:id])
+    @hotel = Hotel.find(params[:id])
      
      
-     if @hotel.update(hotel_params)
-        redirect_to root_path, flash: {notice: "更新が完了しました。"}
-     else
-        render :edit
-     end
+    if @hotel.update(hotel_params)
+      redirect_to root_path, flash: {notice: "更新が完了しました。"}
+    else
+      render :edit
+    end
   end
 
   private
   
   def hotel_params
-     params.require(:hotel).permit(:name,:image,:address,:describe,:title)
+    params.require(:hotel).permit(:name,:image,:address,:describe,:title,:category)
   end
 
   def deny_non_admin_users

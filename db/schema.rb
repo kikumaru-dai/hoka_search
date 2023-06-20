@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_06_10_071259) do
+ActiveRecord::Schema.define(version: 2023_06_20_143421) do
 
   create_table "categories", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", null: false
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2023_06_10_071259) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "category_id"
     t.bigint "location_id"
+    t.string "category"
     t.index ["category_id"], name: "index_hotels_on_category_id"
     t.index ["location_id"], name: "index_hotels_on_location_id"
   end
