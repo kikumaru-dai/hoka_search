@@ -1,5 +1,5 @@
 class HotelsController < ApplicationController
-    before_action :check_admin, only: [:new, :edit]
+  before_action :deny_non_admin_users, only: [:new, :edit]
     
   def index
      @hotels = Hotel.all
@@ -36,10 +36,10 @@ class HotelsController < ApplicationController
   private
   
   def hotel_params
-     params.require(:hotel).permit(:name,:image,:address,:describe,:title)
+     params.require(:hotel).permit(:name,:image,:address,:describe,:title,:category)
   end
 
-  def check_admin
+  def deny_non_admin_users
     unless current_user && current_user.is_admin?
       redirect_to root_path
     end

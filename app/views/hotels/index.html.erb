@@ -144,135 +144,76 @@
       </div>
 
       <div class="row">
-        
-        <div class="col-md-6 my-2">
-        <div class="register_hotel card card-skin">
-          <div class="card__imgframe"></div>
-          <div class="card__textbox">
-            <div class="card__titletext">
-              そらの気分を味わう宿
+        <% @hotels.each do |hotel| %>
+          
+            <div class="col-md-6 my-2">
+              <div class="register_hotel card card-skin">
+                <div class="card__imgframe" style="background-image: url('<%= image_url(hotel.image) %>')"></div>
+                <div class="card__textbox">
+                  <div class="card__titletext">
+                    <%= hotel.title %>
+                  </div>
+                  <p class="text-secondary"><%= hotel.address %></p>
+                  <div class="card__overviewtext">
+                    <%= hotel.describe %>
+                  </div>
+                  <!--タグ機能実装後-->
+                  <p class="text-secondary small" style="font-size: 6px;">#<%= hotel.category %></p>
+                  <!--タグ機能実装後-->
+                  <!--<p class="text-secondary small" style="font-size: 6px;">#オールインクルーシブ#客室に露天風呂がある</p>-->
+                </div>
+              </div>
             </div>
-            <p class="text-secondary">台東区浅草</p>
-            <div class="card__overviewtext">
-              世界自然遺産に登録された奄美大島の青い海が広がり、ホテル前のヤドリ浜には幸せを運ぶと言われるウミガメが生息。白い砂浜とサンゴ礁の美しい海岸が味わえます
+          
+          <div class="col-md-6 my-2">
+            <div class="register_hotel card card-skin">
+              <div class="card__imgframe"></div>
+              <div class="card__textbox">
+                <div class="card__titletext">
+                  そらの気分を味わう宿
+                </div>
+                <p class="text-secondary">台東区浅草</p>
+                <div class="card__overviewtext">
+                  世界自然遺産に登録された奄美大島の青い海が広がり、ホテル前のヤドリ浜には幸せを運ぶと言われるウミガメが生息。白い砂浜とサンゴ礁の美しい海岸が味わえます
+                </div>
+                <p class="text-secondary small" style="font-size: 6px;">#オールインクルーシブ#客室に露天風呂がある</p>
+              </div>
             </div>
-            <p class="text-secondary small" style="font-size: 6px;">#オールインクルーシブ#客室に露天風呂がある</p>
           </div>
-        </div>
-        </div>
         
-        <div class="col-md-6 my-2">
-        <div class="register_hotel card card-skin">
-          <div class="card__imgframe"></div>
-          <div class="card__textbox">
-            <div class="card__titletext">
-              そらの気分を味わう宿
+          <div class="col-md-6 my-2">
+            <div class="register_hotel card card-skin">
+              <div class="card__imgframe"></div>
+              <div class="card__textbox">
+                <div class="card__titletext">
+                  そらの気分を味わう宿
+                </div>
+                <p class="text-secondary">台東区浅草</p>
+                <div class="card__overviewtext">
+                  世界自然遺産に登録された奄美大島の青い海が広がり、ホテル前のヤドリ浜には幸せを運ぶと言われるウミガメが生息。白い砂浜とサンゴ礁の美しい海岸が味わえます
+                </div>
+                <p class="text-secondary small" style="font-size: 6px;">#オールインクルーシブ#客室に露天風呂がある</p>
+              </div>
             </div>
-            <p class="text-secondary">台東区浅草</p>
-            <div class="card__overviewtext">
-              世界自然遺産に登録された奄美大島の青い海が広がり、ホテル前のヤドリ浜には幸せを運ぶと言われるウミガメが生息。白い砂浜とサンゴ礁の美しい海岸が味わえます
-            </div>
-            <p class="text-secondary small" style="font-size: 6px;">#オールインクルーシブ#客室に露天風呂がある</p>
           </div>
-        </div>
-        </div>
         
-        <div class="col-md-6 my-2">
-        <div class="register_hotel card card-skin">
-          <div class="card__imgframe"></div>
-          <div class="card__textbox">
-            <div class="card__titletext">
-              そらの気分を味わう宿
+          <div class="col-md-6 my-2">
+            <div class="register_hotel card card-skin">
+              <div class="card__imgframe"></div>
+              <div class="card__textbox">
+                <div class="card__titletext">
+                  そらの気分を味わう宿
+                </div>
+                <p class="text-secondary">台東区浅草</p>
+                <div class="card__overviewtext">
+                  世界自然遺産に登録された奄美大島の青い海が広がり、ホテル前のヤドリ浜には幸せを運ぶと言われるウミガメが生息。白い砂浜とサンゴ礁の美しい海岸が味わえます
+                </div>
+                <p class="text-secondary small" style="font-size: 6px;">#オールインクルーシブ#客室に露天風呂がある</p>
+              </div>
             </div>
-            <p class="text-secondary">台東区浅草</p>
-            <div class="card__overviewtext">
-              世界自然遺産に登録された奄美大島の青い海が広がり、ホテル前のヤドリ浜には幸せを運ぶと言われるウミガメが生息。白い砂浜とサンゴ礁の美しい海岸が味わえます
-            </div>
-            <p class="text-secondary small" style="font-size: 6px;">#オールインクルーシブ#客室に露天風呂がある</p>
           </div>
-        </div>
-        </div>
         
-        <div class="col-md-6 my-2">
-        <div class="register_hotel card card-skin">
-          <div class="card__imgframe"></div>
-          <div class="card__textbox">
-            <div class="card__titletext">
-              そらの気分を味わう宿
-            </div>
-            <p class="text-secondary">台東区浅草</p>
-            <div class="card__overviewtext">
-              世界自然遺産に登録された奄美大島の青い海が広がり、ホテル前のヤドリ浜には幸せを運ぶと言われるウミガメが生息。白い砂浜とサンゴ礁の美しい海岸が味わえます
-            </div>
-            <p class="text-secondary small" style="font-size: 6px;">#オールインクルーシブ#客室に露天風呂がある</p>
-          </div>
-        </div>
-        </div>
-        
-        <div class="col-md-6 my-2">
-        <div class="register_hotel card card-skin">
-          <div class="card__imgframe"></div>
-          <div class="card__textbox">
-            <div class="card__titletext">
-              そらの気分を味わう宿
-            </div>
-            <p class="text-secondary">台東区浅草</p>
-            <div class="card__overviewtext">
-              世界自然遺産に登録された奄美大島の青い海が広がり、ホテル前のヤドリ浜には幸せを運ぶと言われるウミガメが生息。白い砂浜とサンゴ礁の美しい海岸が味わえます
-            </div>
-            <p class="text-secondary small" style="font-size: 6px;">#オールインクルーシブ#客室に露天風呂がある</p>
-          </div>
-        </div>
-        </div>
-        
-        <div class="col-md-6 my-2">
-        <div class="register_hotel card card-skin">
-          <div class="card__imgframe"></div>
-          <div class="card__textbox">
-            <div class="card__titletext">
-              そらの気分を味わう宿
-            </div>
-            <p class="text-secondary">台東区浅草</p>
-            <div class="card__overviewtext">
-              世界自然遺産に登録された奄美大島の青い海が広がり、ホテル前のヤドリ浜には幸せを運ぶと言われるウミガメが生息。白い砂浜とサンゴ礁の美しい海岸が味わえます
-            </div>
-            <p class="text-secondary small" style="font-size: 6px;">#オールインクルーシブ#客室に露天風呂がある</p>
-          </div>
-        </div>
-        </div>
-        
-        <div class="col-md-6 my-2">
-        <div class="register_hotel card card-skin">
-          <div class="card__imgframe"></div>
-          <div class="card__textbox">
-            <div class="card__titletext">
-              そらの気分を味わう宿
-            </div>
-            <p class="text-secondary">台東区浅草</p>
-            <div class="card__overviewtext">
-              世界自然遺産に登録された奄美大島の青い海が広がり、ホテル前のヤドリ浜には幸せを運ぶと言われるウミガメが生息。白い砂浜とサンゴ礁の美しい海岸が味わえます
-            </div>
-            <p class="text-secondary small" style="font-size: 6px;">#オールインクルーシブ#客室に露天風呂がある</p>
-          </div>
-        </div>
-        </div>
-        
-        <div class="col-md-6 my-2">
-        <div class="register_hotel card card-skin">
-          <div class="card__imgframe"></div>
-          <div class="card__textbox">
-            <div class="card__titletext">
-              そらの気分を味わう宿
-            </div>
-            <p class="text-secondary">台東区浅草</p>
-            <div class="card__overviewtext">
-              世界自然遺産に登録された奄美大島の青い海が広がり、ホテル前のヤドリ浜には幸せを運ぶと言われるウミガメが生息。白い砂浜とサンゴ礁の美しい海岸が味わえます
-            </div>
-            <p class="text-secondary small" style="font-size: 6px;">#オールインクルーシブ#客室に露天風呂がある</p>
-          </div>
-        </div>
-        </div>
-        
+        <% end  %>
       </div>
     
     
