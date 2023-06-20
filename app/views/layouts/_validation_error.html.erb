@@ -1,0 +1,9 @@
+<% if instance.errors.full_messages.present? %>
+  <ul class="p-form__error priority">
+    <% instance.errors.full_messages.each do |msg| %>
+      <li class="p-form__error__item priority">
+        <%= msg %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
