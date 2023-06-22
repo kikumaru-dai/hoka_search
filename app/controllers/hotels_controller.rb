@@ -1,9 +1,11 @@
 class HotelsController < ApplicationController
   before_action :deny_non_admin_users, only: [:new, :edit]
-
+  before_action :set_q, only: [:index, :search]
     
   def index
      @hotels = Hotel.all
+     @categories = Hotel.where.not(category: nil).pluck(:category).uniq
+     @address = Hotel.where.not(address: nil).pluck(:address).uniq
   end
 
   def new
@@ -33,8 +35,16 @@ class HotelsController < ApplicationController
       render :edit
     end
   end
+  
+  def search
+    @results = @q.result
+  end
 
   private
+  
+  def set_q
+    @q = Hotel.ransack(params[:q])
+  end
   
   def hotel_params
     params.require(:hotel).permit(:name,:image,:address,:describe,:title,:category)

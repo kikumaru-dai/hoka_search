@@ -1,0 +1,18 @@
+<section class="py-4 text-center container" >
+    <div class="row">
+      <div class="">
+        <h1>ホテルを検索</h1>
+        
+          <%= search_form_for @q, url: search_hotels_path do |f| %>
+            <%= f.label :address_cont, '都内のエリアを選択' %>
+            <%= f.collection_select :address_cont, @address, :itself, :itself, prompt: "都内のエリアを選択" %>
+            
+            <%= f.label :category_cont, 'カテゴリを選択' %>
+            <%= f.collection_select :category_cont, @categories, :itself, :itself, prompt: "カテゴリを選択" %>
+            <%#= f.collection_select :category_id_cont, Category.where.not(id: 0), :id, :name, include_blank: "カテゴリーの選択", class:"search-select-box"  %>
+            <%= f.submit '検索' %>
+          <% end %>
+          
+      </div>
+    </div>    
+  </section>

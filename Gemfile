@@ -30,6 +30,8 @@ gem 'devise'
 # Image uploader
 gem 'carrierwave', '~> 2.0'
 
+gem 'ransack'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
