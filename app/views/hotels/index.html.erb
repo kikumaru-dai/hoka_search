@@ -15,32 +15,25 @@
       <div class="col-lg-6 col-md-8 mx-auto">
         <h4 class="fw-light mx-auto">「ホカンス」したい都内のホテルを最寄駅とカテゴリから探してみましょう</h1>
       
-          <form class="needs-validation text-center" novalidate>
-          <div class="row g-3 d-flex justify-content-center">
-      
-            <div class="col-md-10 d-flex row">
-              <div class="col-md-6 ">
-                <select class="form-select my-3" id="country" style="height:48px;">
-                  <option value="">都内のエリアを選択</option>
-                  <option>浅草</option>
-                </select>
+          <%= search_form_for @q, url: search_hotels_path, html: { class: "needs-validation text-center" } do |f| %>
+            <div class="row g-3 d-flex justify-content-center">
+              <div class="col-md-10 d-flex row">
+                <div class="col-md-6 ">
+                  <%= f.collection_select :address_cont, @address, :itself, :itself, { prompt: "都内のエリアを選択"}, {class: "form-select my-3", style: "height: 48px;", id: "country" } %>
+                </div>
+              
+                <p class="col-md-1 my-4">✖️</p>
+    
+                <div class="col-md-5 ">
+                  <%= f.collection_select :category_cont, @categories, :itself, :itself, {prompt: "カテゴリを選択"}, {class: "form-select my-3",  style: "height: 48px;", id: "state" } %>
+                </div>
               </div>
-            
-              <p class="col-md-1 my-4">✖️</p>
-  
-              <div class="col-md-5 ">
-                <select class="form-select my-3" id="state" style="height:48px;">
-                  <option value="">カテゴリを選択</option>
-                  <option>サウナがある</option>
-                </select>
+              
+              <div class="col-md-2">
+                <%= f.submit '検索', class: 'btn text-white btn-lg', style: 'background-color:#2146c7;' %>
               </div>
             </div>
-            
-            <div class="col-md-2">
-              <button class=" btn text-white btn-lg" style="background-color:#2146c7;" type="submit">検索</button>
-            </div>
-          </div>
-        </form>
+        <% end %>
       </div>
     </div>
   </section>
