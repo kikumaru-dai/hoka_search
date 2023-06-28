@@ -12,6 +12,10 @@ class HotelsController < ApplicationController
     @hotel = Hotel.new
   end
   
+  def show
+    @hotel = Hotel.find(params[:id])
+  end
+  
   def create
      @hotel = Hotel.new(hotel_params)
     if @hotel.save
