@@ -1,6 +1,7 @@
 class HotelsController < ApplicationController
   before_action :deny_non_admin_users, only: [:new, :edit]
   before_action :set_q, only: [:index, :search]
+  before_action :set_hotel, only: [:show,:edit,:update]
     
   def index
      @hotels = Hotel.all
@@ -13,7 +14,6 @@ class HotelsController < ApplicationController
   end
   
   def show
-    @hotel = Hotel.find(params[:id])
   end
   
   def create
@@ -26,13 +26,9 @@ class HotelsController < ApplicationController
   end
 
   def edit
-     @hotel = Hotel.find(params[:id])
   end
   
   def update
-    @hotel = Hotel.find(params[:id])
-     
-     
     if @hotel.update(hotel_params)
       redirect_to root_path, flash: {notice: "更新が完了しました。"}
     else
@@ -48,6 +44,10 @@ class HotelsController < ApplicationController
   
   def set_q
     @q = Hotel.ransack(params[:q])
+  end
+  
+  def set_hotel
+    @hotel = Hotel.find(params[:id])
   end
   
   def hotel_params

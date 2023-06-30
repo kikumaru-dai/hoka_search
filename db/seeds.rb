@@ -9,7 +9,7 @@
 categories = ['Luxury', 'Economy', 'Resort']
 
 20.times do
-  Hotel.create(
+  Hotel.find_or_create_by(
     name: Faker::Company.name,
     remote_image_url: Faker::LoremFlickr.image,
     address: Faker::Address.full_address,
