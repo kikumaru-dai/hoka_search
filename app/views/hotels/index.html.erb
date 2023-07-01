@@ -141,7 +141,9 @@
           
             <div class="col-md-6 my-2">
               <div class="register_hotel card card-skin">
-                <div class="card__imgframe" style="background-image: url('<%= image_url(hotel.image) %>')"></div>
+                <%= link_to hotel_path(hotel) do %>
+                  <div class="card__imgframe" style="background-image: url('<%= image_url(hotel.image) %>')"></div>
+                <% end %>
                 <div class="card__textbox">
                   <div class="card__titletext">
                     <%= hotel.title %>
@@ -150,10 +152,7 @@
                   <div class="card__overviewtext">
                     <%= hotel.describe %>
                   </div>
-                  <!--タグ機能実装後-->
                   <p class="text-secondary small" style="font-size: 6px;">#<%= hotel.category %></p>
-                  <!--タグ機能実装後-->
-                  <!--<p class="text-secondary small" style="font-size: 6px;">#オールインクルーシブ#客室に露天風呂がある</p>-->
                 </div>
               </div>
             </div>

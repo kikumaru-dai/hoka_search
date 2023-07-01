@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+categories = ['Luxury', 'Economy', 'Resort']
+
+20.times do
+  Hotel.find_or_create_by(
+    name: Faker::Company.name,
+    remote_image_url: Faker::LoremFlickr.image,
+    address: Faker::Address.full_address,
+    describe: Faker::Lorem.paragraph,
+    title: Faker::Lorem.sentence,
+    category: categories.sample
+  )
+end
