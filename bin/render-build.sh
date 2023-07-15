@@ -7,11 +7,7 @@ echo "render-bulid.sh: start"
 echo "installing bundle"
 bundle install
 
-echo "installing JavaScript packages"
-yarn install
 
-echo "compiling webpacker assets"
-bundle exec rails webpacker:compile
 
 echo "precompiling assets"
 bundle exec rake assets:precompile
