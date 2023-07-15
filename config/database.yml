@@ -50,6 +50,6 @@ test:
 #
 production:
   <<: *default
-  database: hoka_search_production
-  username: hoka_search
-  password: <%= ENV['HOKA_SEARCH_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  url: <%= ENV['DATABASE_URL'] %>
