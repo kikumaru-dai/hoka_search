@@ -156,8 +156,6 @@ tab {
 .indicators-style {
   border-radius: 50px;
   margin: 1px 3px;
-  height: $carousel-indicator-length;
-  max-width: $carousel-indicator-length;
 }
 
 .p-hover {
